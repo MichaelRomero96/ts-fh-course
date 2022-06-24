@@ -1,6 +1,10 @@
 import { useState } from 'react';
 
-function Counter({ initialValue = 15 }) {
+interface Props {
+    initialValue?: number;
+}
+
+function Counter({ initialValue = 0 }: Props) {
     const [counter, setCounter] = useState(initialValue);
 
     const handleClick = () => {
